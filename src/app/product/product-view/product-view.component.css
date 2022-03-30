@@ -1,0 +1,15 @@
+/* .row{
+    justify-content: center;
+    align-content: center;
+ } */
+ .card-img {
+    transition: 0.3s ease-in-out;
+}
+ img :hover{
+     transition: 0.3s ease-in-out;
+     transform: scale(1.1);
+ }
+
+ body{
+     background-color: aquamarine;
+ }

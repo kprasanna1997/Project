@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 col-md-5 col-lg-5 mt-5  register">
+                <h3 class="text-center">Register</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Full Name</label>
+                        <input type="text" class="form-control" formControlName="fullName">
+                        <span style="color: red; font-size:small;" *ngIf="fullName.invalid && fullName.touched && registerForm.controls['fullName'].errors['required']">Name cannot be empty</span>
+                        <span style="color: red; font-size:small;" *ngIf="fullName.invalid && fullName.touched && registerForm.controls['fullName'].errors['pattern']">Enter a valid name</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Email Id</label>
+                        <input type="text" class="form-control" formControlName="email">
+                        <span style="color: red; font-size:small;" *ngIf="email.invalid && email.touched && registerForm.controls['email'].errors['required']">Email address cannot be empty</span>
+                        <span style="color: red; font-size:small;" *ngIf="email.invalid && email.touched && registerForm.controls['email'].errors['pattern']">Enter a valid email address</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Age</label>
+                        <input type="text" class="form-control" formControlName="age">
+                        <span style="color: red; font-size:small;" *ngIf="age.invalid && age.touched && registerForm.controls['age'].errors['required']">Age cannot be empty</span>
+                        <span style="color: red; font-size:small;" *ngIf="age.invalid && age.touched && registerForm.controls['age'].errors['pattern']">Enter a valid age</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+                        <span style="color: red; font-size: small;" *ngIf="password.invalid && password.touched && registerForm.controls['password'].errors['required']">Password cannot be empty</span>
+                        <span style="color: red; font-size: small;" *ngIf="password.invalid && password.touched && registerForm.controls['password'].errors['pattern']">Enter a valid name</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Confirm Password</label>
+                        <input type="password" class="form-control" formControlName="cnfPassword">
+                        <span style="color: red; font-size: small;" *ngIf="cnfPassword.invalid && cnfPassword.touched && registerForm.controls['cnfPassword'].errors['required']">Confirm password cannot be empty</span>
+                        <span style="color: red; font-size: small;" *ngIf="cnfPassword.invalid && cnfPassword.touched && registerForm.controls['cnfPassword'].invalid">Password is not matching</span>
+                    </div>
+                    <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary mt-3">Register</button>
+                </form>
+                <p class="mt-2">Already have an account? <a routerLink="/login">Click here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

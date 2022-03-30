@@ -1,0 +1,50 @@
+{
+  "posts": [
+    {
+      "productName": "Mobile",
+      "productPrice": "25000",
+      "productImageUrl": "https://m.media-amazon.com/images/I/71geVdy6-OS._SX569_.jpg",
+      "productDescription": "Good in the market",
+      "id": 1
+    },
+    {
+      "productName": "Watch",
+      "productPrice": "12000",
+      "productImageUrl": "https://m.media-amazon.com/images/I/618T783gN6L._SY450_.jpg",
+      "productDescription": "Have your own time",
+      "id": 2
+    },
+    {
+      "productName": "Ear pod",
+      "productPrice": "6000",
+      "productImageUrl": "https://static.toiimg.com/thumb/msid-73672277,imgsize-43345,width-400,resizemode-4/73672277.jpg",
+      "productDescription": "Enjoy music",
+      "id": 3
+    },
+    {
+      "productName": "Headphone",
+      "productPrice": "15000",
+      "productImageUrl": "https://media.istockphoto.com/photos/headphones-in-trippy-colors-picture-id1309150577?b=1&k=20&m=1309150577&s=170667a&w=0&h=K7HnYslGB5TYMbSvlImWfdLxGIA_m90VEafx3BQL0X8=",
+      "productDescription": "Enjoy listening",
+      "id": 4
+    },
+    {
+      "productName": "Earphone",
+      "productPrice": "1500",
+      "productImageUrl": "https://m.media-amazon.com/images/I/51-JsO-OCxL._SL1500_.jpg",
+      "productDescription": "Have it",
+      "id": 5
+    },
+    {
+      "productName": "Smart Watch",
+      "productPrice": "15000",
+      "productImageUrl": "https://www.reliancedigital.in/medias/Noise-WRB-SW-BUZZ-SMARTWATCH-492574063-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyOTY5ODZ8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ2L2gzOS85NzM0OTA3ODIyMTEwLmpwZ3w3MDkyNzJkMmM4YjVhMzJjYzZlYTVlNDBiNTUwNmQzMzcyMmI3NGZjN2I5MTJhOTkyMWI5NWJjNDg4ZmU4NTZm",
+      "productDescription": "Enjoy your time",
+      "id": 6
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

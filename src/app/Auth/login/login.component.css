@@ -1,0 +1,13 @@
+.row{
+    justify-content: center;
+    align-content: center;
+ }
+ body{
+     background-color: aquamarine;  
+     height: 100vh;
+     
+}
+.log{
+    background-color: white;
+    border-radius: 5px;
+}
