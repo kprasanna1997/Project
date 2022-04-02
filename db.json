@@ -9,7 +9,7 @@
     },
     {
       "productName": "Watch",
-      "productPrice": "12000",
+      "productPrice": "12005",
       "productImageUrl": "https://m.media-amazon.com/images/I/618T783gN6L._SY450_.jpg",
       "productDescription": "Have your own time",
       "id": 2
@@ -41,6 +41,13 @@
       "productImageUrl": "https://www.reliancedigital.in/medias/Noise-WRB-SW-BUZZ-SMARTWATCH-492574063-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3wyOTY5ODZ8aW1hZ2UvanBlZ3xpbWFnZXMvaDQ2L2gzOS85NzM0OTA3ODIyMTEwLmpwZ3w3MDkyNzJkMmM4YjVhMzJjYzZlYTVlNDBiNTUwNmQzMzcyMmI3NGZjN2I5MTJhOTkyMWI5NWJjNDg4ZmU4NTZm",
       "productDescription": "Enjoy your time",
       "id": 6
+    },
+    {
+      "productName": "Laptop",
+      "productPrice": "85000",
+      "productImageUrl": "https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/notebooks/latitude-notebooks/13-3320/media-gallery/peripherals_laptop_latitude_3320_gallery_1.psd?fmt=pjpg&pscan=auto&scl=1&wid=3337&hei=2417&qlt=100,0&resMode=sharp2&size=3337,2417",
+      "productDescription": "Better have it!",
+      "id": 7
     }
   ],
   "comments": [],

@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand"><strong>My cart</strong></a>
+        <button class="btn btn-success" (click)="onAddClick()" data-toggle="modal" data-target="#exampleModal">Add
+            Products</button>
+    </nav>
     <div class="container">
         <div class="row">
             <div class="col-sm-3 col-md-3 col-lg-3 mt-3 mb-3" *ngFor="let product of productList">
                 <div class="card">
-                    <div class="card-body" >
+                    <div class="card-body">
                         <h4 class="card-title">{{product.productName}}</h4>
-                        <img style="height: 100px; width: 100px;" src="{{product.productImageUrl}}" class="card-img-top" alt="...">
+                        <img style="height: 100px; width: 100px;" src="{{product.productImageUrl}}" class="card-img-top"
+                            alt="...">
                         <p class="card-text">{{product.productDescription}}</p>
                         <p class="card-text">Rs. {{product.productPrice}}</p>
-                        <a class="btn btn-primary" (click)="editProduct(product)" data-toggle="modal" data-target="#exampleModal">Edit</a>
+                        <a class="btn btn-primary" (click)="editProduct(product)" data-toggle="modal"
+                            data-target="#exampleModal">Edit</a>
                         <a class="btn btn-danger ml-3" (click)="deleteProduct(product.id)">Delete</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
-    
-    
+
+
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -38,56 +47,52 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <!-- <div class="row">
-                            <div class="col-sm-6 col-md-6 col-lg-6"> -->
-                                <!-- <h3 class="text-center">Add Product</h3> -->
-                                <form [formGroup]="productForm" (ngSubmit)="submit()">
-                                    <div class="form-group">
-                                        <label>Product Name</label>
-                                        <input type="text" class="form-control" formControlName="productName">
-                                        <span style="color: red; font-size: medium;"
-                                            *ngIf="productName.invalid && productName.touched && productForm.controls['productName'].errors['required']">Product
-                                            name cannot be empty</span>
-                                        <span style="color: red; font-size: medium;"
-                                            *ngIf="productName.invalid && productName.touched && productForm.controls['productName'].errors['pattern']">Enter
-                                            a valid Product name</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Product Price</label>
-                                        <input type="text" class="form-control" formControlName="productPrice">
-                                        <span style="color: red; font-size: medium;"
-                                            *ngIf="productPrice.invalid && productPrice.touched && productForm.controls['productPrice'].errors['required']">Product
-                                            price cannot be empty</span>
-                                        <span style="color: red; font-size: medium;"
-                                            *ngIf="productPrice.invalid && productPrice.touched && productForm.controls['productPrice'].errors['pattern']">Enter
-                                            a correct Product price</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Product Image Url</label>
-                                        <input type="text" class="form-control" formControlName="productImageUrl">
-                                        <span style="color: red; font-size: medium;"
-                                            *ngIf="productImageUrl.invalid && productImageUrl.touched && productForm.controls['productImageUrl'].errors['required']">Product
-                                            price cannot be empty</span>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Product Description</label>
-                                        <input type="text" class="form-control" formControlName="productDescription">
-                                        <span style="color: red; font-size: medium;"
-                                            *ngIf="productDescription.invalid && productDescription.touched && productForm.controls['productDescription'].errors['required']">Product
-                                            price cannot be empty</span>
-                                    </div>
-                                </form>
-                            <!-- </div>
-                        </div> -->
+                        <form [formGroup]="productForm" (ngSubmit)="submit()">
+                            <div class="form-group">
+                                <label>Product Name</label>
+                                <input type="text" class="form-control" formControlName="productName">
+                                <span style="color: red; font-size: medium;"
+                                    *ngIf="productName.invalid && productName.touched && productForm.controls['productName'].errors['required']">Product
+                                    name cannot be empty</span>
+                                <span style="color: red; font-size: medium;"
+                                    *ngIf="productName.invalid && productName.touched && productForm.controls['productName'].errors['pattern']">Enter
+                                    a valid Product name</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Product Price</label>
+                                <input type="text" class="form-control" formControlName="productPrice">
+                                <span style="color: red; font-size: medium;"
+                                    *ngIf="productPrice.invalid && productPrice.touched && productForm.controls['productPrice'].errors['required']">Product
+                                    price cannot be empty</span>
+                                <span style="color: red; font-size: medium;"
+                                    *ngIf="productPrice.invalid && productPrice.touched && productForm.controls['productPrice'].errors['pattern']">Enter
+                                    a correct Product price</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Product Image Url</label>
+                                <input type="text" class="form-control" formControlName="productImageUrl">
+                                <span style="color: red; font-size: medium;"
+                                    *ngIf="productImageUrl.invalid && productImageUrl.touched && productForm.controls['productImageUrl'].errors['required']">Product
+                                    price cannot be empty</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Product Description</label>
+                                <input type="text" class="form-control" formControlName="productDescription">
+                                <span style="color: red; font-size: medium;"
+                                    *ngIf="productDescription.invalid && productDescription.touched && productForm.controls['productDescription'].errors['required']">Product
+                                    price cannot be empty</span>
+                            </div>
+                            <button type="button" class="btn btn-secondary" [disabled]="productForm.invalid"
+                                *ngIf="showUpdate" (click)="updateProduct()" data-dismiss="modal">Update</button>
+                            <button type="submit" [disabled]="productForm.invalid" *ngIf="showAdd"
+                                class="btn btn-primary">Add</button>
+                            <button type="button" class="btn btn-primary ml-3" id="close">Cancel</button>
+                        </form>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" [disabled]="productForm.invalid"
-                        (click)="updateProduct()" data-dismiss="modal">Update</button>
-                    <button type="button" class="btn btn-primary" id="close">Cancel</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

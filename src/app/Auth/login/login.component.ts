@@ -11,8 +11,12 @@ export class LoginComponent implements OnInit {
 
   constructor(private router:Router) { }
   login(loginForm:NgForm) {
-    console.log(loginForm.value);
-    this.router.navigate(["/product/view"])
+    console.log(loginForm.value.role);
+    if(loginForm.value.role === "Admin"){
+      this.router.navigate(["/product/view"])
+    }else{
+      this.router.navigate(["/product/home"])
+    }
    }
   ngOnInit(): void {
   }
